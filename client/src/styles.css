@@ -1,0 +1,46 @@
+
+body {
+    font-family: Verdana, Arial;
+	font-size: medium;
+}
+.sidebar {
+	position: fixed;
+	left: -200px;
+	top: 0;
+	width: 200px;
+	height: 100%;
+	background-color: #333;
+	transition: all 0.3s ease-in-out;
+}
+
+.sidebar a {
+	display: block;
+	color: #fff;
+	padding: 20px;
+	text-decoration: none;
+	transition: all 0.3s ease-in-out;
+}
+
+.sidebar a:hover {
+	background-color: #555;
+}
+
+.content {
+	padding: 20px;
+	margin-left: 200px;
+}
+
+@media (max-width: 768px) {
+	.sidebar {
+		left: -100%;
+	}
+	.content {
+		margin-left: 0;
+	}
+}
+
+@media (min-width: 768px) {
+	.sidebar {
+		left: 0;
+	}
+}

@@ -1,0 +1,20 @@
+<div class="content">
+  <h1>Formulario nuevo sistema</h1>
+  <p>Bienvenido a nuestro sitio web. Aquí encontrará información sobre nuestros servicios y productos.</p>
+
+  <form>
+    <div class="mb-3 mt-3">
+      <label for="titulo" class="form-label">Título:</label>
+      <input [(ngModel)]="programa.titulo" type="text" class="form-control" id="titulo" placeholder="Ingrese el título del proyecto" name="titulo">
+    </div>
+    <div class="mb-3 mt-3">
+      <label for="descripcion" class="form-label">Descripción:</label>
+      <input [(ngModel)]="programa.descripcion" type="text" class="form-control" id="descripcion" placeholder="Ingrese la descripcion del proyecto" name="descripcion">
+    </div>
+    <div class="mb-3">
+      <label for="imagen" class="form-label">Imagen:</label>
+      <input [(ngModel)]="programa.imagen" type="text" class="form-control" id="imagen" placeholder="URL de la imagen" name="imagen">
+    </div>
+    <button (click)="edit ? updatePrograma(): savePrograma()" class="btn btn-primary">Guardar</button>
+  </form> 
+</div>

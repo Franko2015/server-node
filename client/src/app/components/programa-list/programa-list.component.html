@@ -1,0 +1,22 @@
+<div class="content">
+  <h1>Listado sistemas</h1>
+  <p>Este es un listado de los productos a la venta.</p>
+  <table class="table table-bordered table-hover">
+    <tr>
+      <th>ID</th>
+      <th>TITULO</th>
+      <th>DESCRIPCION</th>
+      <th>IMAGEN</th>
+      <th></th>
+      <th></th>
+    </tr>
+    <tr *ngFor="let p of programas">
+      <td>{{p.id}}</td>
+      <td>{{p.titulo}}</td>
+      <td>{{p.descripcion}}</td>
+      <td> <img [src]="p.imagen" width="120"> </td>
+      <td><button class="btn btn-outline-primary" (click)="editPrograma(p.id)">Editar</button></td>
+      <td><button class="btn btn-outline-danger" (click)="deletePrograma(p.id)">Eliminar</button></td>
+    </tr>
+  </table>
+</div>
